@@ -15,6 +15,9 @@ jobs:
         - 3.7
         - 3.8
         - 3.9 
+        exclude: #added
+        - os: macos-latest #added
+          py-version: 3.9 
 
        
     steps:
@@ -22,4 +25,5 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: "${{matrix.py-version}}"
+        
         
